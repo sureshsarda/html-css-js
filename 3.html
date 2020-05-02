@@ -1,0 +1,83 @@
+<html>
+
+<head>
+
+    <title>DOM Manipulation</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c002ef5785.js" crossorigin="anonymous"></script>
+
+
+    <style>
+        * {
+            font-family: 'PT Sans', sans-serif;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .items {
+            display: block;
+            position: relative;
+            padding: 20px;
+            max-width: 200px;
+        }
+
+        .menu {
+            font-size: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>This is an assignments page.</h1>
+        <h2>Assignment 3 - Creating a drop down menu</h2>
+        <p>A classic and most commonly way to hide and show elements is using the 'display' property.
+            display: none hides the element, and display: blocks shows it. We can use this to hide and
+            show elements. Imagine a drop down which comes up when you hover over something and goes 
+            away when you leave that element.
+        </p>
+
+        <p>When you open the source, note the 'mouseenter' and 'mouseout' events that are applied to
+            the 'Show Help!' div. We have just used 'click' for now. There are lot of such events and
+            we will learn them one by one.
+        </p>
+
+        <div class="menu" onmouseenter="showPopover()" onmouseout="hidePopover()">
+            Show Help!
+        </div>
+        <div class="items shadow-sm">
+            This is help! You can have lot's of help here. This should be visible when someone hovers
+            over the show help text and should get hidden when they go away from it.
+        </div>
+
+    </div>
+
+    <script>
+
+        function showPopover() {
+            console.log("Mouse Enter.")
+            // write code here to show the element with by class 'items'
+            // getElemenetsByClassNames returns a collection of element
+            // you can use array index type operations to get a particular
+            // element. e.g.: elements[23]
+            // Since there is only one element with class menu, your array
+            // will have size 1 and therefore you will have to access it 
+            // using [0]
+
+            // next, you have to set the style such that the display property 
+            // show the element
+        }
+
+        function hidePopover() {
+            console.log("Mouse Out.")
+            // use the display property to hide the element
+
+        }
+    </script>
+</body>
+
+</html>
